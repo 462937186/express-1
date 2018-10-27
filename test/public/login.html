@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				background: skyblue;
+			}
+			
+			.box {
+				border-radius: 10px;
+				background: #fff;
+				width: 400px;
+				height: 300px;
+				border: 2px solid #ccc;
+				margin: 100px auto;
+			}
+			
+			.box .title {
+				color: skyblue;
+				width: 300px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				margin: 0 auto;
+				font-size: 20px;
+				font-weight: bold;
+				border-bottom: 2px solid skyblue;
+			}
+			
+			.box .content {
+				text-align: center;
+				width: 300px;
+				margin: 30px auto;
+			}
+			
+			.box .content input[type=text],
+			.box .content input[type=password] {
+				display: inline-block;
+				border-radius: 5px;
+				width: 200px;
+				margin: 20px 10px;
+			}
+			
+			.box .content button {
+				cursor: pointer;
+				width: 300px;
+				border-color: skyblue;
+				background: skyblue;
+				border-radius: 5px;
+				color: #fff;
+				height: 30px;
+			}
+			
+			.box .footer {
+				float: right;
+			}
+			
+			.foot {
+				text-decoration: none;
+				color: #000;
+				cursor: pointer;
+				margin: 0 10px;
+			}
+			
+			.foot:hover {
+				color: skyblue;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<div class="title">登录系统</div>
+			<div class="content">
+				<label for="username">账号:</label><input type="text" id="username" /><br />
+				<label for="password">密码:</label><input type="password" id="password" /><br />
+				<button id="login">登录</button>
+			</div>
+			<div class="footer">
+				没账号?
+				<a class="foot" href="sign.html">注册</a>
+			</div>
+		</div>
+		<script src="javascripts/jquery.js"></script>
+		<script src="javascripts/jquery.cookie.js"></script>
+		<script type="text/javascript">
+			$("#login").click(function() {
+				let state = true;
+				if($("#username").val().trim() == "" || $("#password").val().trim() == "") {
+					alert("账号或密码为空");
+					return;
+				}
+				if(state) {
+					$.ajax({
+						type: "post",
+						data: {
+							username: $("#username").val(),
+							password: $("#password").val()
+						},
+						url: "http://localhost:3000/users/login",
+						async: true,
+						success: function(data) {
+							console.log(data)
+							if(data==$("#username").val().trim()){
+								location.href="home.html";
+							}
+						}
+					});
+				}
+
+			})
+		</script>
+	</body>
+
+</html>

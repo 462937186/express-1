@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="stylesheets/bootstrap.css" />
+		<link rel="stylesheet" href="stylesheets/dashboard.css" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/home.css"/>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
+			<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#" id="adname">商户名字</a>
+			<!--<input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">-->
+			<ul class="navbar-nav px-3">
+				<li class="nav-item text-nowrap">
+					<a class="nav-link" href="#" id="clos">登出</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="container-fluid">
+			<div class="row">
+				<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+					<div class="sidebar-sticky">
+						<ul class="nav flex-column">
+							<li class="nav-item">
+								<a class="nav-link active" href="home.html">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
+										<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+										<polyline points="9 22 9 12 15 12 15 22"></polyline>
+									</svg>
+									已上架商品 <span class="sr-only">(current)</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="main1.html">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+										<path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+										<polyline points="13 2 13 9 20 9"></polyline>
+									</svg>
+									添加商品
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="message.html">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart">
+										<circle cx="9" cy="21" r="1"></circle>
+										<circle cx="20" cy="21" r="1"></circle>
+										<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+									</svg>
+									留言板
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="message1.html" target="_blank">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart">
+										<circle cx="9" cy="21" r="1"></circle>
+										<circle cx="20" cy="21" r="1"></circle>
+										<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+									</svg>
+									查看留言板
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+
+				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+					<h2>已上架商品</h2>
+					<!--<div class="table-responsive">-->
+					<input class="form-control  w-100" type="text" placeholder="搜索" aria-label="Search" id="search">
+					<hr />
+					<table class="table table-striped table-sm table-hover">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th width="20%">商品主图片</th>
+								<th width="20%">商品名字</th>
+								<th width="15%">商品价格</th>
+								<th width="15%">库存</th>
+								<th>删除</th>
+								<th>修改</th>
+							</tr>
+						</thead>
+						<tbody id="productList">
+							<!--<tr>
+								<td>1</td>
+								<td id="img"><img src="images/shangpin1.jpg" class="gift-pic img-thumbnail" /></td>
+								<td id="lasname">SK-II 紧肤抗皱修复系列 肌源修护润致精华霜</td>
+								<td id="J-price">￥29</td>
+								<td id="p-quantity">49</td>
+								<td><input type="button" id="del" value="删除" class="btn btn-danger" /></td>
+								<td><input type="button" id="alter" value="修改" class="btn btn-warning" /></td>
+							</tr>-->
+						</tbody>
+					</table>
+				</main>
+			</div>
+		</div>
+		<div class="overlay"></div>
+		<div class="box container rounded">
+			<h4>修改</h4>
+			<p class="text-muted"></p>
+			<div class="container row align-items-center ">
+				<ul class="col updata nav justify-content-center">
+					<a class="imglia col mb-2" href="javascript:void(0);">
+						<img class="imglis " src="images/shangpin1.jpg" />
+						<input type="file" class="form-control filecss" id="updataimg" name="upimges" accept=".gif,.jpg,.png" required>
+					</a>
+					<a class="imglia col mb-2" href="javascript:void(0);">
+						<img class="imglis" src="images/shangpin1.jpg" />
+						<input type="file" class="form-control filecss" id="updataimg" name="upimges" accept=".gif,.jpg,.png" required>
+					</a>
+					<a class="imglia col mb-2" href="javascript:void(0);">
+						<img class="imglis" src="images/shangpin1.jpg" />
+						<input type="file" class="form-control filecss" id="updataimg" name="upimges" accept=".gif,.jpg,.png" required>
+					</a>
+				</ul>
+				<div class="form-horizontal col clearfix">
+					<div class="form-group ">
+						<div class="col ">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text">商品名字</span>
+								</div>
+								<input type="text" class="form-control" id="updataname">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="updataprice" class="col control-label">单价</label>
+						<div class="col">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text">￥</span>
+								</div>
+								<input type="text" class="form-control " id="updataprice" placeholder="Username" value="300" required>
+								<div class="invalid-feedback">
+									Please choose a username.
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group ">
+						<div class="col ">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text">商品库存</span>
+								</div>
+								<input type="text" class="form-control" id="updatakucun">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row nav justify-content-center">
+				<div class=" row align-items-center">
+					<div class=" nav-item col">
+						<button  id="yes" class="btn btn-primary" type="submit">确定</button>
+
+					</div>
+					<div class=" nav-item col">
+						<button id="no" class="btn btn-primary" type="submit">取消</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="javascripts/jquery.js"></script>
+		<script src="javascripts/jquery.cookie.js"></script>
+		<script src="javascripts/home.js"></script>
+
+	</body>
+
+</html>

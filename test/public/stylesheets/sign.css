@@ -1,0 +1,68 @@
+body {
+				background: skyblue;
+			}
+			
+			.box {
+				border-radius: 10px;
+				background: #fff;
+				width: 400px;
+				height: 400px;
+				border: 2px solid #ccc;
+				margin: 100px auto;
+			}
+			
+			.box .title {
+				color: skyblue;
+				width: 300px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				margin: 0 auto;
+				font-size: 20px;
+				font-weight: bold;
+				border-bottom: 2px solid skyblue;
+			}
+			
+			.box .content {
+				text-align: center;
+				width: 300px;
+				margin: 30px auto;
+			}
+			
+			.box .content input[type=text],
+			.box .content input[type=password] {
+				display: inline-block;
+				border-radius: 5px;
+				width: 200px;
+				margin: 20px 10px;
+			}
+			
+			.box .content label {
+				text-align: left;
+				display: inline-block;
+			}
+			
+			.box .content button {
+				cursor: pointer;
+				width: 300px;
+				border-color: skyblue;
+				background: skyblue;
+				border-radius: 5px;
+				color: #fff;
+				height: 30px;
+			}
+			
+			.box .footer {
+				float: right;
+			}
+			
+			.foot {
+				text-decoration: none;
+				color: #000;
+				cursor: pointer;
+				margin: 0 10px;
+			}
+			
+			.foot:hover {
+				color: skyblue;
+			}

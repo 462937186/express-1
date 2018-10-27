@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="stylesheets/bootstrap.css" />
+		<link rel="stylesheet" href="stylesheets/dashboard.css" />
+		<style type="text/css">
+			.media {
+				margin-top: 10px;
+			}
+			
+			.preview {
+				margin-left: 20px;
+				border: 5px dashed #ccc;
+			}
+			
+			.plunimg {
+				width: 50px;
+				height: 50px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="container-fluid">
+			<div class="row">
+				<main role="main" class="col-md-9 m-sm-auto col-lg-10 pt-3 px-4">
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1">@</span>
+						</div>
+						<input type="text" id="username" class="form-control" placeholder="用户名" aria-label="Username" aria-describedby="basic-addon1">
+					</div>
+					<textarea id="message" class="form-control" rows="4" placeholder="输入留言"></textarea>
+					<p class="text-muted"></p>
+					<button type="button" class="btn btn-success" id="send">提交评论</button>
+					<hr width="100%" style="height:1px;" color="#ccc" />
+					<ul class="list-unstyled">
+						<li class="media">
+							<img class="mr-3 align-self-center plunimg" src="images/shangpin1.jpg" alt="Generic placeholder image">
+							<div class="media-body">
+								<h5 class="mt-0 mb-1">名字</h5> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+							</div>
+						</li>
+						<li class="media my-4">
+							<img class="mr-3 align-self-center plunimg" src="images/shangpin1.jpg" alt="Generic placeholder image">
+							<div class="media-body">
+								<h5 class="mt-0 mb-1">名字</h5> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+							</div>
+						</li>
+						<li class="media">
+							<img class="mr-3 align-self-center plunimg" src="images/shangpin1.jpg" alt="Generic placeholder image">
+							<div class="media-body">
+								<h5 class="mt-0 mb-1">名字</h5> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+							</div>
+						</li>
+					</ul>
+				</main>
+			</div>
+		</div>
+		<script src="javascripts/jquery.js"></script>
+		<script src="javascripts/socket.io.js"></script>
+		<script src="javascripts/message1.js"></script>
+
+	</body>
+
+</html>
