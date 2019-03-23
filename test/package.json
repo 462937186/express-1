@@ -6,6 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "request": "2.88.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
@@ -13,10 +14,18 @@
     "jade": "~1.11.0",
     "mongoose": "^5.3.7",
     "morgan": "~1.9.0",
+    "multer": "^1.4.1",
     "socket.io": "^2.1.1"
   },
   "main": "app.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "assets": "^3.0.0",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.4",
+    "mongodb": "^3.1.8",
+    "multer": "^1.4.1",
+    "mysql": "^2.16.0"
+  },
   "author": "",
   "license": "ISC",
   "description": ""
